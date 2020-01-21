@@ -1,5 +1,7 @@
 class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
+        if len(digits) < 1:
+            return []
         result = ['']
         chars = dict()
         chars['2'] = ['a', 'b', 'c']
@@ -21,5 +23,3 @@ class Solution:
                     temp.append(str+char)
             result = temp
         return result
-        
-        
